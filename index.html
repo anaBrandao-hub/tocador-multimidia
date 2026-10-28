@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Folio Sonoro — Tocador de Áudio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <p class="brand">
+        <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+        Folio Sonoro
+      </p>
+    </header>
+
+    <main>
+      <article class="player-card" aria-labelledby="song-title">
+        <figure class="cover-wrap">
+          <img
+            id="cover"
+            src="./assets/capa1.jpg"
+            alt="Capa do álbum da faixa atual"
+            width="320"
+            height="320"
+          />
+        </figure>
+
+        <section class="track-info">
+          <h1 id="song-title">Jornada do Mago</h1>
+          <p id="song-artist">Arquivos de Eldoria</p>
+        </section>
+
+        <section class="progress-section" aria-label="Progresso da faixa">
+          <input
+            id="progress"
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            step="0.1"
+            aria-label="Barra de progresso da música"
+          />
+          <div class="time-row">
+            <time id="current-time" datetime="PT0S">0:00</time>
+            <time id="duration" datetime="PT0S">0:00</time>
+          </div>
+        </section>
+
+        <nav class="controls" aria-label="Controles de reprodução">
+          <button type="button" id="btn-prev" aria-label="Faixa anterior">
+            <i class="fa-solid fa-backward-step" aria-hidden="true"></i>
+          </button>
+          <button type="button" id="btn-play" class="play-btn" aria-label="Reproduzir">
+            <i class="fa-solid fa-play" aria-hidden="true"></i>
+          </button>
+          <button type="button" id="btn-next" aria-label="Próxima faixa">
+            <i class="fa-solid fa-forward-step" aria-hidden="true"></i>
+          </button>
+        </nav>
+
+        <section class="playlist" aria-label="Lista de faixas">
+          <h2>Playlist</h2>
+          <ol id="playlist-list"></ol>
+        </section>
+      </article>
+    </main>
+
+    <audio id="audio" preload="metadata"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
