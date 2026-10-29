@@ -1,0 +1,10 @@
+Aluna: Ana Flávia Araújo Brandão
+Projeto: App Tocador de Áudio (Estilo Spotify)
+Repositório: https://github.com/anaBrandao-hub/tocador-multimidia.git
+
+INSTRUÇÕES DE EXECUÇÃO:
+Professor, para avaliar o projeto, não é necessária a instalação de dependências ou servidores.
+
+1. Faça o download do repositório (Download ZIP) ou clone na sua máquina.
+2. Extraia a pasta.
+3. Dê dois cliques no arquivo 'index.html' para abri-lo diretamente no navegador.
